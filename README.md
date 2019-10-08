@@ -22,3 +22,45 @@ for (i=0; i<6; i++) {
 }
 printf("\n");
 } // FIM DA REPETICAO DA GERACAO DE APOSTAS return 0; }
+
+Questão da prova
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char str[1000];
+    int c, i=0;
+
+    printf("Digite um numero.\n");
+    gets(str);
+    int  tamanho= strlen(str);
+    int certo=0, sinal=0;
+    printf("Vc digitou %d caracteres e eles ", tamanho);
+    while(i<=tamanho){
+
+        if ((str[i]>=48)&&(str[i]<=57))
+            certo++;
+        if(str[i]==46)
+            certo++;
+        if(((str[0]<48)&&(str[0]<57))&&((str[0]!=43)&&(str[0]!=45))){
+            printf("nao formam um numero\n");
+           return 0;}
+        if(((str[i]==46)||(str[i]==44))&&((str[i+1]==46)||(str[i+1]==44))){
+            printf("nao formam um numero\n");
+            return 0;
+      }
+        i++;
+    }
+    if((str[0]==45)||(str[0]==43)){
+        certo++;
+    }
+    if(tamanho==certo){
+        printf("formam um numero\n");}
+    else {
+        printf("nao formam um numero\n");
+    }
+}
+
