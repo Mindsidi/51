@@ -16,3 +16,4 @@ int main()
 
     return 0;
 }
+//int x;\n int *px\n; 1)&x retorna o endereço de x, s e aplica as comuns e as ponteiros; \n 2) *px retorna o conteudo do que esta quardado no endereço que px armazena.
